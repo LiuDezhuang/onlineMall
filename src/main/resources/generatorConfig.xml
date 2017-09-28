@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+ <!-- 数据库驱动包位置 -->
+ <classPathEntry location="S:\home\generator\mysql-connector-java-5.1.34.jar" /> 
+ <context id="context1" >
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" 
+    	 connectionURL="jdbc:mysql://localhost:53306/leo?characterEncoding=utf8"  
+    	 userId="root" 
+    	 password="root" />
+    <!-- 生成模型的包名和位置 -->
+    <javaModelGenerator targetPackage="com.litian.domain" targetProject="E:/gitWork/onlineMall/src/main/java" />
+    
+    <!-- 生成的映射文件包名和位置 -->
+    <sqlMapGenerator targetPackage="com.litian.dao" targetProject="E:/gitWork/onlineMall/src/main/java" />
+    
+    <!-- 生成DAO的包名和位置 -->
+    <javaClientGenerator targetPackage="com.litian.dao" targetProject="E:/gitWork/onlineMall/src/main/java" type="XMLMAPPER" />
+    
+    <!-- 要生成那些表(更改tableName和domainObjectName就可以) -->
+	<table tableName="dt_p2p_conf"
+    	domainObjectName="Confing"
+    	enableCountByExample="false" 
+    	enableUpdateByExample="false" 
+    	enableDeleteByExample="false" 
+    	enableSelectByExample="false" 
+    	selectByExampleQueryId="false">
+        <columnOverride column="InstCode" property="InstCode" />
+ 		<columnOverride column="MerchCode" property="MerchCode" />
+ 		<columnOverride column="remark" property="remark" />
+ 		<columnOverride column="onlineOrPage" property="onlineOrPage" />
+ 		<columnOverride column="interfaceUrl" property="interfaceUrl" />
+ 		<columnOverride column="pageUrl" property="pageUrl" />
+ 		<columnOverride column="flag" property="flag" />
+    </table>
+  </context>
+</generatorConfiguration>
